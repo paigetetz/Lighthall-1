@@ -14,9 +14,20 @@ const Counter = () => {
 	const increment = () => setCount(count + 1);
 
 	return (
-		<div>
-			<h2>Counter: {count}</h2>
-			<button onClick={increment}>Increment</button>
+		<div className='bg-white rounded-lg shadow-lg p-20'>
+			<h2 className='text-lg font-bold mb-4'>
+				Counter:
+				<span class='text-blue-500' id='counter-value'>
+					{count}
+				</span>
+			</h2>
+			<button
+				class='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded'
+				id='increment-button'
+				onClick={increment}
+			>
+				Increment
+			</button>
 		</div>
 	);
 };
